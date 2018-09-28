@@ -46,6 +46,6 @@ Full documentation can be found here:
 
 ![EE Logo](https://raw.githubusercontent.com/GustavBrock/VBA.CurrencyCode/master/images/EE%20Logo.png) 
 
-[ISO 4217 Currency Codes in VBA](https://www.experts-exchange.com/articles/32054/ISO-4217-Currency-Codes-in-VBA.html)
+[ISO 4217 Currency Codes in VBA](https://www.experts-exchange.com/articles/33162/ISO-4217-Currency-Codes-in-VBA.html)
 
 Included is a Microsoft Access example application.
