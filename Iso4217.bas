@@ -2,7 +2,7 @@ Attribute VB_Name = "Iso4217"
 Option Compare Database
 Option Explicit
 
-' CurrencyCode V1.0.1
+' CurrencyCode V1.0.2
 ' (c) Gustav Brock, Cactus Data ApS, CPH
 ' https://github.com/GustavBrock/VBA.CurrencyCode
 
@@ -10,6 +10,11 @@ Option Explicit
 '   https://www.iso.org/iso-4217-currency-codes.html
 
     
+' Compiler constants.
+'
+' Select Early Binding (True) or Late Binding (False).
+#Const EarlyBinding = True
+
 ' Operation constants.
 '
 ' Base URL for currency lists at ISO.
