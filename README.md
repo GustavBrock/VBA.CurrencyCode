@@ -48,4 +48,7 @@ Full documentation can be found here:
 
 [ISO 4217 Currency Codes in VBA](https://www.experts-exchange.com/articles/33162/ISO-4217-Currency-Codes-in-VBA.html)
 
-Included is a Microsoft Access example application.
+Included is a *Microsoft Access* example application.
+
+### Currency Exchange Rates ###
+For this, see my project [VBA.CurrencyExchange](https://github.com/GustavBrock/VBA.CurrencyExchange).
