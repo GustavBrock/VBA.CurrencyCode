@@ -2,7 +2,7 @@ Attribute VB_Name = "DateUtil"
 Option Compare Text
 Option Explicit
 
-' DateUtil v1.0.1
+' DateUtil v1.0.3
 ' (c) Gustav Brock, Cactus Data ApS, CPH
 ' https://github.com/GustavBrock/VBA.Timezone
 '
@@ -183,19 +183,22 @@ Public Function DateWeekdayInMonth( _
   
 End Function
 
-' Returns the sign of Expression, +, -, for positive or negative
-' values, or a space (or a plus sign) for zero or a non-numeric value.
+' Returns the sign of Expression, + or - for positive or negative
+' values, or a space (or a plus sign) for zero.
+' For a non-numeric value, a space is returned.
 '
 ' If ZeroPlus is True, + will be returned also for zero values.
 '
 ' Examples:
 '   0.78    -> "+"
-'   "-23,9" -> "-"
+'   "-23.9" -> "-"
 '   Null    -> " "
-'   Date()  -> " "
+'   Date()  -> "+"
+'   Time()  -> "+"
+'   -Time() -> "-"
 '   "Yes"   -> " "
 '
-' 2016-07-05. Gustav Brock, Cactus Data ApS, CPH.
+' 2018-11-17. Gustav Brock, Cactus Data ApS, CPH.
 '
 Public Function FormatSign( _
     ByVal Expression As Variant, _
@@ -218,5 +221,28 @@ Public Function FormatSign( _
 
 End Function
 
-
+' Converts a date/time formatted like "yyyy-mm-ddThh:nn:ssZ"
+' to a date value.
+'
+' 2018-10-12. Gustav Brock, Cactus Data ApS, CPH.
+'
+Public Function DateIso8601( _
+    ByVal Expression As String) _
+    As Date
+    
+    ' Date-time separator.
+    Const Separator As String = "T"
+    ' Final length excluding milliseconds or timezone.
+    Const Length    As Long = 19
+    
+    Dim Result      As Date
+    
+    Expression = Left(Trim(Replace(Expression, Separator, " ")), Length)
+    If IsDate(Expression) Then
+        Result = CDate(Expression)
+    End If
+    
+    DateIso8601 = Result
+    
+End Function
 

@@ -52,3 +52,11 @@ Included is a *Microsoft Access* example application.
 
 ### Currency Exchange Rates ###
 For this, see my project [VBA.CurrencyExchange](https://github.com/GustavBrock/VBA.CurrencyExchange).
+
+<hr>
+
+*If you wish to support my work or need extended support or advice, feel free to:*
+
+<p>
+
+[<img src="https://raw.githubusercontent.com/GustavBrock/VBA.CurrencyCode/master/images/BuyMeACoffee.png">](https://www.buymeacoffee.com/gustav/)
